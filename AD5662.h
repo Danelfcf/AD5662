@@ -8,11 +8,11 @@ class AD5662
 	  /******************************************************************************/
 	  /* AD5662 Power Modes                                                         */
 	  /******************************************************************************/  
-	  int AD5662_LOAD = 0x0;
-	  int AD5662_PWRDWN_1K  =       0x1 ;
-	  int AD5662_PWRDWN_100K =      0x2;
-	  int AD5662_PWRDWN_TRISTATE=   0x3;
-	  int AD5662_FULLSCALE      = 65535;
+	  int AD5662_NORM       = 0x0;
+	  int AD5662_1K_2_GND   = 0x1 ;
+	  int AD5662_100K_2_GND = 0x2;
+	  int AD5662_TRISTATE   = 0x3;
+	  int AD5662_FULLSCALE  = 0xFFFF;
   
 	  AD5662(int CS, float VoltageReference, int ComType){AD5662_CS = CS; AD5662_VoltageReference = VoltageReference; AD5662_COM = ComType;};
 	  void ad5662_BitBang(int data, int clk){AD5662_DATA = data; AD5662_CLK = clk; AD5662_COM = 2;};
